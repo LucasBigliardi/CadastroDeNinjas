@@ -1,6 +1,7 @@
-package dev.java10x.CadastroDeNinjas;
+package dev.java10x.CadastroDeNinjas.Ninjas.Controller.Service;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 //JPA = Java Persistence API
 @Entity
@@ -8,9 +9,11 @@ import jakarta.persistence.*;
 public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nome;
     private int idade;
     private String email;
+    private List<MissoesModel> missoes;
 
     public NinjaModel(){
     }

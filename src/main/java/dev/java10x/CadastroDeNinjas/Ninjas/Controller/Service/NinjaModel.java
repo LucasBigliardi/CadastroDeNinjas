@@ -1,5 +1,6 @@
 package dev.java10x.CadastroDeNinjas.Ninjas.Controller.Service;
 
+import dev.java10x.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -13,7 +14,11 @@ public class NinjaModel {
     private String nome;
     private int idade;
     private String email;
-    private List<MissoesModel> missoes;
+
+    //@ManyToOne um ninja tem uma unica missao
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") //Foreing Key ou chave estrangeira
+    private MissoesModel missoes;
 
     public NinjaModel(){
     }

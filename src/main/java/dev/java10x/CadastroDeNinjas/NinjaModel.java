@@ -2,7 +2,7 @@ package dev.java10x.CadastroDeNinjas;
 
 import jakarta.persistence.*;
 
-//Estity transforma uma classe em uma entidade do BD
+//Entity transforma uma classe em uma entidade do BD
 //JPA = Java Persistence API
 @Entity
 @Table(name = "tb_cadastro")

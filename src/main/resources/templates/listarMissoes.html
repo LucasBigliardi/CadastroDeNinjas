@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Tabela de Missões</title>
+</head>
+<body>
+
+<h1>Lista de Missões</h1>
+<a th:href="@{/missoes/ui/adicionar}">Adicionar Nova Missão</a>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nome da Missão</th>
+        <th>Dificuldade</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="missoes: ${missoes}">
+        <td th:text="${missoes.id}"></td>
+        <td th:text="${missoes.nomeMissao}"></td>
+        <td th:text="${missoes.dificuldade}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
